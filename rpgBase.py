@@ -113,25 +113,30 @@ def elemParse(filename):
     return strengthDict
 
 
-filename = 'rpgData.xml'
+def main():
+    filename = 'rpgData.xml'
 
-strengthDict = elemParse(filename)
+    strengthDict = elemParse(filename)
 
-# print(strengthDict['umbra'])
+    # print(strengthDict['umbra'])
 
-# Demonstrates how a class variable is shared b/w a class and a derived class
-# print(person.charType)
-# print(enemy.charType)
+    # Demonstrates how a class variable is shared b/w a class and a derived class
+    # print(person.charType)
+    # print(enemy.charType)
 
-# Sample method of initializing a player and enemy
-person = Player(10, 25, 10, 7, 10, 7, 8, 'elec', [], 'Nate', 0)
-enemy = Character(8, 10, 3, 4, 1, 3, 6, 'aqua', [])
+    # Sample method of initializing a player and enemy
+    person = Player(10, 25, 10, 7, 10, 7, 8, 'elec', [], 'Nate', 0)
+    enemy = Character(8, 10, 3, 4, 1, 3, 6, 'aqua', [])
 
-# We check if an opponent's element is inside the list of elements a char's
-# element is strong against and make judgement
-if enemy.elem in strengthDict[person.elem]:
-    print('2x effective')
-elif person.elem in strengthDict[enemy.elem]:
-    print('0.5x effective')
-else:
-    print('1x effective')
+    # We check if an opponent's element is inside the list of elements a char's
+    # element is strong against and make judgement
+    if enemy.elem in strengthDict[person.elem]:
+        print('2x effective')
+    elif person.elem in strengthDict[enemy.elem]:
+        print('0.5x effective')
+    else:
+        print('1x effective')
+
+
+if __name__ == '__main__':
+    main()
