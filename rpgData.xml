@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!--Note that in an XML file there can only be ONE root element; everything
+    else needs to go inside this root-->
+<RPGData>
+    <!--ElemChart defines what each element is strong against; when calculating
+        how much damage an entity receives, elemental weaknesses are taken into
+        account. We also have this chart available for characters that are a
+        specific element themselves, so this is also defined for them-->
+    <ElemChart>
+        <!--Standard Elements ("tangible")-->
+        <Elem strongAg="igni,terra,lux" immunTo="">aero</Elem>
+        <Elem strongAg="terra,aqua" immunTo="">arbor</Elem>
+        <Elem strongAg="igni,terra,umbra" immunTo="">aqua</Elem>
+        <Elem strongAg="aero,aqua" immunTo="">elec</Elem>
+        <Elem strongAg="arbor,elec,glacie" immunTo="">ferro</Elem>
+        <Elem strongAg="aero,arbor,terra" immunTo="">glacie</Elem>
+        <Elem strongAg="arbor,ferro,glacie" immunTo="">igni</Elem>
+        <Elem strongAg="elec,ferro,igni" immunTo="">terra</Elem>
+        <!--Meta Elements ("non-tangible")-->
+        <Elem strongAg="" immunTo="">none</Elem>
+        <Elem strongAg="morte,umbra" immunTo="none">lux</Elem>
+        <Elem strongAg="lux,morte" immunTo="none">umbra</Elem>
+        <Elem strongAg="none,arbor,ferro" immunTo="lux,umbra">morte</Elem>
+        <!--Note: ulti will be reserved for late-game spells and enemies that are
+            designed to be extremely strong/needed for plot purposes-->
+        <Elem strongAg="aero,arbor,aqua,elec,ferro,glacie,igni,lux,morte,terra,ulti,umbra" immunTo="">ulti</Elem>
+    </ElemChart>
+    <!--SkillList holds *all* of the skills characters can learn, and is split
+        up into different categories (attacks and status skills)-->
+    <SkillList>
+        <!--Holds all of the attacks available for all characters-->
+        <AttackList>
+            <!--**************-->
+            <!--Physical-Based-->
+            <!--**************-->
+            <!--Aero-->
+            <!--Arbor-->
+            <!--Aqua-->
+            <!--Elec-->
+            <!--Ferro-->
+            <!--Glacie-->
+            <!--Igni-->
+            <!--Terra-->
+            <!--None-->
+            <Skill type="physical" elem="none" power="5" accuracy="100">Punch</Skill>
+            <Skill type="physical" elem="none" power="15" accuracy="100">Bash</Skill>
+            <Skill type="physical" elem="none" power="40" accuracy="90">Savage_Uppercut</Skill>
+            <Skill type="physical" elem="none" power="2" accuracy="100">Stab</Skill>
+            <Skill type="physical" elem="none" power="10" accuracy="100">Slash</Skill>
+            <Skill type="physical" elem="none" power="30" accuracy="100">Triple_Edge</Skill>
+            <Skill type="physical" elem="none" power="50" accuracy="100">Wide_Edge</Skill>
+            <!--Lux-->
+            <!--Umbra-->
+            <!--Morte-->
+            <Skill type="physical" elem="none" power="10" accuracy="100">Cursed_Spike</Skill>
+            <Skill type="physical" elem="none" power="500" accuracy="100">Killing_Blow</Skill>
+
+            <!--Ulti-->
+            <!--***********-->
+            <!--Magic-Based-->
+            <!--***********-->
+            <!--Aero-->
+            <Skill type="magical" elem="aero" power="20" accuracy="100">Gale_I</Skill>
+            <Skill type="magical" elem="aero" power="45" accuracy="100">Gale_II</Skill>
+            <Skill type="magical" elem="aero" power="65" accuracy="100">Gale_III</Skill>
+            <Skill type="magical" elem="aero" power="90" accuracy="100">Gale_IV</Skill>
+            <!--Arbor-->
+            <Skill type="magical" elem="arbor" power="20" accuracy="100">Overgrow_I</Skill>
+            <Skill type="magical" elem="arbor" power="45" accuracy="100">Overgrow_II</Skill>
+            <Skill type="magical" elem="arbor" power="65" accuracy="100">Overgrow_III</Skill>
+            <Skill type="magical" elem="arbor" power="90" accuracy="100">Overgrow_IV</Skill>
+            <!--Aqua-->
+            <Skill type="magical" elem="aqua" power="20" accuracy="100">Hydrate_I</Skill>
+            <Skill type="magical" elem="aqua" power="45" accuracy="100">Hydrate_II</Skill>
+            <Skill type="magical" elem="aqua" power="65" accuracy="100">Hydrate_III</Skill>
+            <Skill type="magical" elem="aqua" power="90" accuracy="100">Hydrate_IV</Skill>
+            <!--Elec-->
+            <Skill type="magical" elem="elec" power="20" accuracy="100">Bolt_I</Skill>
+            <Skill type="magical" elem="elec" power="45" accuracy="100">Bolt_II</Skill>
+            <Skill type="magical" elem="elec" power="65" accuracy="100">Bolt_III</Skill>
+            <Skill type="magical" elem="elec" power="90" accuracy="100">Bolt_IV</Skill>
+            <Skill type="magical" elem="elec" power="150" accuracy="50">Overflow_Current</Skill>
+            <!--Ferro-->
+            <Skill type="magical" elem="ferro" power="50" accuracy="100">Repulse_I</Skill>
+            <Skill type="magical" elem="ferro" power="90" accuracy="100">Repulse_II</Skill>
+            <Skill type="magical" elem="ferro" power="150" accuracy="50">Exponential_Flux</Skill>
+            <!--Glacie-->
+            <Skill type="magical" elem="glacie" power="30" accuracy="100">Hail_I</Skill>
+            <Skill type="magical" elem="glacie" power="50" accuracy="100">Hail_II</Skill>
+            <Skill type="magical" elem="glacie" power="70" accuracy="100">Hail_III</Skill>
+            <Skill type="magical" elem="glacie" power="90" accuracy="100">Hail_IV</Skill>
+            <!--Igni-->
+            <Skill type="magical" elem="igni" power="30" accuracy="100">Pyro_I</Skill>
+            <Skill type="magical" elem="igni" power="50" accuracy="100">Pyro_II</Skill>
+            <Skill type="magical" elem="igni" power="70" accuracy="100">Pyro_III</Skill>
+            <Skill type="magical" elem="igni" power="90" accuracy="100">Pyro_IV</Skill>
+            <!--Terra-->
+            <Skill type="magical" elem="terra" power="30" accuracy="100">Quake_I</Skill>
+            <Skill type="magical" elem="terra" power="50" accuracy="100">Quake_II</Skill>
+            <Skill type="magical" elem="terra" power="70" accuracy="100">Quake_III</Skill>
+            <Skill type="magical" elem="terra" power="90" accuracy="100">Quake_IV</Skill>
+            <!--None-->
+            <Skill type="magical" elem="none" power="75" accuracy="100">Force_Wave</Skill>
+            <!--Lux-->
+            <Skill type="magical" elem="lux" power="20" accuracy="95">Radiance_I</Skill>
+            <Skill type="magical" elem="lux" power="35" accuracy="95">Radiance_II</Skill>
+            <Skill type="magical" elem="lux" power="65" accuracy="95">Radiance_III</Skill>
+            <Skill type="magical" elem="lux" power="95" accuracy="95">Radiance_IV</Skill>
+            <!--Umbra-->
+            <Skill type="magical" elem="umbra" power="20" accuracy="95">Eclipse_I</Skill>
+            <Skill type="magical" elem="umbra" power="35" accuracy="95">Eclipse_II</Skill>
+            <Skill type="magical" elem="umbra" power="65" accuracy="95">Eclipse_III</Skill>
+            <Skill type="magical" elem="umbra" power="95" accuracy="95">Eclipse_IV</Skill> 
+            <!--Morte-->
+            <Skill type="magical" elem="morte" power="60" accuracy="70">Malice_I</Skill>
+            <Skill type="magical" elem="morte" power="80" accuracy="80">Malice_II</Skill>
+            <Skill type="magical" elem="morte" power="100" accuracy="90">Malice_III</Skill>
+            <!--Ulti-->
+            <Skill type="magical" elem="ulti" power="40" accuracy="90">Alpha Beam</Skill>
+            <Skill type="magical" elem="ulti" power="70" accuracy="85">Particle Collision</Skill>
+            <Skill type="magical" elem="ulti" power="110" accuracy="80">Quark_Storm</Skill> 
+            <Skill type="magical" elem="ulti" power="170" accuracy="60">Singularity</Skill>
+        </AttackList>
+        <!--Holds all of the status-changing skills that can be inflicted in battle-->
+        <StatusAtkList>
+        </StatusAtkList>
+    </SkillList>
+    <!--Holds information on how status effects affect a Character-->
+    <StatusEffects>
+    </StatusEffects>
+</RPGData>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<CharacterData>
+    <!--Provides data for each of the player characters (including their
+    list of skills and their individual starting stats)-->
+    <PlayerChars>
+        <NathanList>
+            <Name>Nathaniel</Name>
+            <!--List of skills (sorted by level learned)-->
+            <Skill lvlLnd="0">Slash</Skill>
+            <Skill lvlLnd="0">Gale_I</Skill>
+        </NathanList>
+        <MelissaList>
+            <Name>Melissa</Name>
+            <!--List of skills (sorted by level learned)-->
+        </MelissaList>
+    </PlayerChars>
+    <EnemyChars>
+    </EnemyChars>
+</CharacterData>
